@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="main.org.lele.mapper.ItemMapper">
+<select id="findAllJobOffers" resultMap="Item_list">
+		select * from
+		job_offers
+</select>
+	
+<!-- 		private String jobId ;	//招聘信息id
+	private String jobName ;	//职位名称
+	private String jobHref ;	//招聘信息链接
+	private String releaseDate ;	//招聘信息的发布日期
+	private String workPlace ;	//工作地点
+	private String companyIndustry ;	//公司所在行业
+	private String companySize ;	//公司规模
+	private String companyType ;	//公司类型
+	private String recruitmentNumber ;	//招聘人数
+	private String jobDescription -->
+	
+<resultMap type="Item" id="Item_list">
+	<id property="jobId" column="job_id"/>
+	<result property="jobId" column="job_id"/>
+	<result property="jobName" column="job_name"/>
+	<result property="jobHref" column="job_href" />
+	<result property="releaseDate" column="release_date" />
+	<result property="workPlace" column="work_place" />
+	<result property="companyIndustry" column="company_industry"/>
+	<result property="companySize" column="company_size" />
+	<result property="companyType" column="company_type" />
+	<result property="recruitmentNumber" column="recruitment_number" />
+	<result property="jobDescription" column="job_description" />
+</resultMap>	
+</mapper>
